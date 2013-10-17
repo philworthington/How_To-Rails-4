@@ -4,7 +4,8 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = @goal.steps
+    goal = Goal.find(params[:goal_id])
+    @steps = goal.steps
   end
 
   # GET /steps/1

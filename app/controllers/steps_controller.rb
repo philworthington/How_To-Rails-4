@@ -1,5 +1,5 @@
 class StepsController < ApplicationController
-  before_action :set_step, only: [:new, :show, :edit, :update, :destroy]
+  # before_action :set_step, only: [:new, :show, :edit, :update, :destroy]
 
   # GET /steps
   # GET /steps.json
@@ -30,7 +30,7 @@ class StepsController < ApplicationController
   # POST /steps
   # POST /steps.json
   def create
-    binding.pry
+    # binding.pry
     @step = @goal.steps.new(params[:step])
 
     respond_to do |format|
